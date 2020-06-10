@@ -28,7 +28,7 @@ def main():
     def specific_atom_centric(structure,atom1,atom2,atom3,radius):
         point = args.point
         if not point == None:
-            site_search = struct.get_sites_in_sphere(point,include_image=True,r=5)
+            site_search = struct.get_sites_in_sphere(point,include_image=True,r=args.radius)
             sites_init = [i[0].coords for i in site_search if i[0].as_dict()['species'][0]['element'] == atom1]
             sites_init_frac = [i[0].frac_coords for i in site_search if i[0].as_dict()['species'][0]['element'] == atom1] 
         else:    
