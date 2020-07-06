@@ -29,5 +29,6 @@ setup(
     packages=find_packages(),
     install_requires=['tabulate','numpy', 'pandas', 'pymatgen','argparse'],
     entry_points={'console_scripts': [
-                      'bap = bap.bond_angles:main']},
+                      'bap-bap = bap.bond_angles:main',
+                      'bap-tilt = bap.tilt_angles:main']},
     )
